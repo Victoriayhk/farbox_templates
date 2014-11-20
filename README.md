@@ -24,7 +24,7 @@ the comment system I used is *disqus*, and the corresponding script codes are in
 
 #### google code prettify
 for better using, [google code prettify](https://code.google.com/p/google-code-prettify/wiki/GettingStarted) JavaScript added. 
-The codes(C++, Python, html, etc.) you post will look more beautiful than default template. But, too long code present in a blog? no good, it's ugly. don't present source code too often. this script is low, you can just remove the google code prettify system:
+The codes(C++, Python, html, etc.) you post will look more beautiful than default template. But, too long code present in a blog? no good, it's ugly. don't present source code too often, or you can just remove the google code prettify system:
 
 1. remove folder'./google-code-prettify'
 2. deleta codes about it in './base.html'
