@@ -5,8 +5,12 @@
 {% block content %}
 <!-- Banner -->
 	<section id="banner">
+		<br/ >
 		<h2>Yih's Little home</h2>
 		<p>Record of Every Piece of My Beautiful Life</p>
+		<br />
+		<br />
+		<br />
 	</section>		
 
 <!-- Main -->
@@ -14,19 +18,34 @@
 		
 		<section class="box special">
 			<div class="features-row">
+				{% set posts = get_data(type='post', limit=3, pager_name='posts') %}
 				{% for post in posts %}
 					<section>
 						<span class="icon major fa-cloud accent4"></span>
-						<h3><a href = {{ post.url }}>{{ post.title }}</a></h3>
-						last updated : {{ post.date.format('%Y-%m-%d') }} | vistors : {{ post.visits }}
-						<p>{{ post.content.opening or post.content.limit(200) }}</p>
+						<h3>{{ post.title }}</h3>
+						published on : {{ post.date.format('%Y-%m-%d') }} | vistors : {{ post.visits }}
+						<div style="text-align:justify;width:70%;margin:20px auto auto 15%">{{ post.content.opening or post.content.limit(200) }}</div>
+						<div style="width:70%;margin:-5px auto auto 45%"><a href = {{ post.url }}>Read More</a></div>
 						<br />
 						<br />
 						<br />
 						<br />
 					</section>
 				{% endfor %}
+
 			</div>
+
+			{% if paginator.has_previous or  paginator.has_next %}
+			    <ul class="actions">
+			        {% if paginator.has_previous %}
+			            <li><a href={{ paginator.previous_page_url }} class="button alt small">上一页</a></li>
+			        {% endif %}
+			        {% if paginator.has_next %}
+			            <li><a href={{ paginator.next_page_url }} class="button alt small">下一页</a></li>
+			        {% endif %}
+			    </ul>
+			{% endif %}
+				
 		</section>
 	
 	</section>

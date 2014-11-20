@@ -18,7 +18,7 @@
 				<section class="box">
 					{% for post in posts %}
 						<h3><a href = {{ post.url }}>{{ post.title }}</a></h3>
-						last updated : {{ post.date.format('%Y-%m-%d') }} | vistors : {{ post.visits }}
+						published on : {{ post.date.format('%Y-%m-%d') }} | vistors : {{ post.visits }}
 						<br />
 					{% endfor %}
 				</section>
