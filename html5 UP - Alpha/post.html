@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+
+{% block title %} {{ site.title }} - {{ post.title }} {% endblock %}
+
+{% block bodyclass %}{% endblock %}
+
+{% block headclass %}class="skel-layers-fixed"{% endblock %}
+
+{% block content %}
+<!-- Main -->
+	<section id="main" class="container">
+		<header>
+			<h2>{{ post.title }}</h2>
+			<p>last updated : {{ post.date.format('%Y-%m-%d') }} | vistors : {{ post.visits }}</p>
+		</header>
+		<div class="box">
+			{{ post.content }}
+		</div>
+		{% include "includes/comments.html" %}
+	</section>
+{% endblock %}

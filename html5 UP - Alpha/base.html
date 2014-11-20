@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="../../../../../../../../template/js/jquery.min.js"></script>
+		<script src="../../../../../../../../template/js/jquery.dropotron.min.js"></script>
+		<script src="../../../../../../../../template/js/jquery.scrollgress.min.js"></script>
+		<script src="../../../../../../../../template/js/skel.min.js"></script>
+		<script src="../../../../../../../../template/js/skel-layers.min.js"></script>
+		<script src="../../../../../../../../template/js/init.js"></script>
+		<link rel="stylesheet" href="../../../../../../../../template/css/skel.css" />
+		<link rel="stylesheet" href="../../../../../../../../template/css/style.css" />
+		<link rel="stylesheet" href="../../../../../../../../template/css/style-wide.css" />
+		<link href="../../../../../../../../template/google-code-prettify/sunburst.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="../../../../../../../../template/google-code-prettify/prettify.js"></script>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body {% block bodyclass %}class="landing"{% endblock %}>
+
+		{% block header %}
+		<!-- Header -->
+			<header id="header" {% block headclass %}class="alt"{% endblock %}>
+				<nav id="nav">
+					<ul>
+						<li><a href="../../../../../../../../">Home</a></li>
+						<li><a href="../../../../../../../../archive">Archive</a></li>
+					</ul>
+				</nav>
+			</header>
+		{% endblock %}
+
+		<script type="text/javascript">
+			$(window).load(function(){
+     			$("pre").addClass("prettyprint");
+     			prettyPrint();
+     		})
+     	</script>
+
+		{% block content %}
+		{% endblock %}
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+					<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; yih. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+	</body>
+</html>

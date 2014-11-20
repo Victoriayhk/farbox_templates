@@ -1,0 +1,29 @@
+{% extends "base.html"%}
+
+{% block title %} {{ site.title }} - Archive {% endblock %}
+
+{% block bodyclass %}{% endblock %}
+
+{% block headclass %}class="skel-layers-fixed"{% endblock %}
+
+{% block content %}
+<!-- Main -->
+	<section id="main" class="container">
+		<header>
+			<h2>Archive</h2>
+		</header>
+		<div class="row">
+			<div class="12u">
+				<!-- Text -->
+				<section class="box">
+					{% for post in posts %}
+						<h3><a href = {{ post.url }}>{{ post.title }}</a></h3>
+						last updated : {{ post.date.format('%Y-%m-%d') }} | vistors : {{ post.visits }}
+						<br />
+					{% endfor %}
+				</section>
+			</div>					
+		</div>
+	</section>	
+{% endblock %}
+
