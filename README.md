@@ -7,7 +7,7 @@ About
 This project is about jinja2 templates for [farbox blog](http://yih.farbox.com). 
 this is Jinja2 syntax, besides farbox, other blog platform with Jinja2 templates can work too.
 
-To use these templates, take farbox for example, you can copy the template folder and put it under your XXX.farbox.com folder, then set your `Template Priority` to `Custom Template`. make sure the template folder name should just be **template**. I suggest you to see more detail below for each template.
+To use these templates, take farbox for example, you can copy the template folder and put it under your XXX.farbox.com folder, then set your `Template Priority` to `Custom Template`. make sure the template folder name just be **template**. I suggest you to see more details below for each template.
 
 Details
 -------
